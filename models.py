@@ -7,9 +7,9 @@ import datetime
 DATABASE = PostgresqlDatabase('muse_app', host='localhost', port=5432)
 
 class Song(Model):
-    song_name = CharField()
+    title = CharField()
     artist = CharField()
-    release_year = IntegerField()
+    album = CharField()
     created_at = DateTimeField(default=datetime.datetime.now)
 
     class Meta:
